@@ -27,7 +27,7 @@
         - **논리 타입**
             - boolean : 참 or 거짓( 0 or 1)
 
-- Lvalue : 변수를 준비하는부분 |  Rvlaue : 값을 생성하는 부분
+      - Lvalue : 변수를 준비하는부분 |  Rvlaue : 값을 생성하는 부분
 
 - 문자열
 
