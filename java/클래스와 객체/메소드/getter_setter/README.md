@@ -24,7 +24,7 @@
     ```
      'set'(prefix) + <필드명> => void set필드명(필드타입 매개변수명) { ... }
     
-     예: private String name = "Yoseph";
+     예: private String name = "Sangjun";
     
         'set' + name ==>
     
