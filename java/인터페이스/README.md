@@ -7,3 +7,9 @@
   
 - implements
     - A(클래스) → B(인터페이스) (implements)상속
+
+- 인터페이스의 구성멤버
+    1. 추상메소드
+    2. 상수 (static final 상수)
+    3. default method
+    4. static method
