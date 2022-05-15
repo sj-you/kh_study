@@ -33,3 +33,50 @@
 - WWW(World-Wide Web)
     - 인터넷을 기반으로 그 위에서 제공되는 수많은 서비스중 하나.
     - 정보의 제공(Web 1.0) 과 상호작용(정보의 제공 - Web 2.0) 을 목적으로 하는 서비스.
+ 
+ - WAN : 지역 네트워크를 통신 회선으로 연결한것 이다.
+- **LoopbackAddress**
+    - 자기 자신의 주소를 의미한다.
+- 여러개의 주소 가져오기.
+    - 가져온 주소 값이 음수일 경우 256을 더해줘야 한다.
+    
+    ```java
+    // 주어진 도메인명이 dNS에 등록된 모든 IP주소를 가져와서 주소를 구성하는 각 정수 출력하는 예제
+    		InetAddress addr = InetAddress.getByName("naver.com");
+    		byte[] addBytes = addr.getAddress();
+    		log.info("\t+ b: {}", Arrays.toString(addBytes));
+    		
+    		for(byte b : addBytes) {
+    			log.info("\t+ b: {}", (b < 0)? b+256 : b);
+    		} // enhanced for
+    ```
+    
+- URL : Uniform Resource Locator
+    - (단일화된 방법으로 웹상의 자원의 위치를 알려주는자)
+- URI : Uniform Resource Indicator
+    - (단일화된 방법으로 웹상의 자원을 가리키는 지시자)
+
+- https -- 통신규약(웹에서는 2개로 정해져 있음: http / https ) 
+- http: HyperText Transfer Protocol Secure
+ 
+- :<Port>  -- 서버프로그램의 포트번호를 작성
+    
+> 네트워크 특징
+> 
+> 
+> TCP/IP Networking
+> 
+> TCP : 전송제어 통신규약 <-> UDP (User-Datagram Packet): 편지봉투
+> 
+> IP   : Internet Protocol (인터넷 통신규약)
+> IP주소와 Port 번호로 연결생성
+> 
+- socket 은 양방향인데 수신작업이 모두 종료되면, 수신만 먼저 닫을 수 있다.
+    
+    ```java
+    sock.shutdownInput();
+    ```
+    
+- jmc 사용
+    - PS C:\app\scoop\apps\jmc\8.2.0-06> ./jmc.exe
+ 
