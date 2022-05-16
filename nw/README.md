@@ -76,7 +76,21 @@
     ```java
     sock.shutdownInput();
     ```
+- accept : 동작을 완료할수 있을때 까지 중지하는 용도
+- 자원객체를 사용하면 다 사용한후 꼭 close();을 사용하여 닫아야 한다
+- try
     
-- jmc 사용
-    - PS C:\app\scoop\apps\jmc\8.2.0-06> ./jmc.exe
- 
+    ```java
+    try(serverSocket){	// () 안에 반드시 close 해야할 자원객체의 참조변수를 넣는다
+    			;;	    // 이 {} 안에서, 무언가 수행하다 반드시, 예외가 발생하든 안하든
+    					// {} 안에서 serverSocket 에 저장된 자원객체를 사용하는곳
+    		}	// try with-resources
+    ```
+    
+
+- 타입 변환.
+
+```java
+byte bValue = Byte.parseByte("10");		// 기본타입으로 반환
+Byte byteObj = Byte.valueOf("10");		// 참조타입으로 반환
+```
