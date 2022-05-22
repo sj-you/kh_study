@@ -51,7 +51,11 @@ _객체는 문자가 아니므로 바이트 기반 스트림으로 데이터 변
 	직렬화/역직렬화가 애시당초 불가능한 필드에 대해서는, InputStream/OutputStream이 제공하는
 	메소드로 직접 입/출력을 수행하고, 나머지 Serializable 한 필드는 JVM이 하듯이 동일하게 처리._  
 	```java
-	private void writeObject(ObjectOutputStream out) throws IOException { ... }
-	private void readObject(ObjectInputStream in) throws IOException, ClassNotFoundException { ... }
+	private void writeObject(ObjectOutputStream out) throws IOException { 
+		out.writeUTF(field1);	// 부모에게서 상속받는 직렬화 불가능한 필드를 직접 직렬화 수행
+	}
+	private void readObject(ObjectInputStream in) throws IOException, ClassNotFoundException {		
+		out.writeUTF(field1);	// 부모에게서 상속받는 직렬화 불가능한 필드를 직접 직렬화 수행 
+	}
 	```
   
