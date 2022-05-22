@@ -53,9 +53,11 @@ _객체는 문자가 아니므로 바이트 기반 스트림으로 데이터 변
 	```java
 	private void writeObject(ObjectOutputStream out) throws IOException { 
 		out.writeUTF(field1);	// 부모에게서 상속받는 직렬화 불가능한 필드를 직접 직렬화 수행
+		out.defaultWriteObject(); // 기본 직렬화
 	}
 	private void readObject(ObjectInputStream in) throws IOException, ClassNotFoundException {		
-		out.writeUTF(field1);	// 부모에게서 상속받는 직렬화 불가능한 필드를 직접 직렬화 수행 
+		ield1 = in.readUTF();
+		in.defaultReadObject();
 	}
 	```
   
