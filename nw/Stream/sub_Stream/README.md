@@ -34,10 +34,24 @@ _객체는 문자가 아니므로 바이트 기반 스트림으로 데이터 변
     
   컴파일을 수행할때마다 변경된다.
   ```
-1. 부모/자식 모두Serializable 한 경우  
+1. **부모/자식 모두Serializable 한 경우**  
 	_자식객체를 직렬화 할 때 ===> 자식만이 아니라, 부모객체까지 함께 직렬화된다(기본 직렬화 동작)_
      
-2. 부모만 Serializable 하고, 자식은 Non-serializable  
+2. **부모만 Serializable 하고, 자식은 Non-serializable**  
     _자식 객체를 직렬화 하면 ===> 위 1번과 같다. (***)_    
     _즉, 부모의 Serializable 한 성질이 자식에게도 상속된다. (*******)_
+    
+3. **부모만 Non-Serializable 하고, 자식은 Serializable 할 때**  
+
+     _자식 객체를 직렬화 하면 ===> 자식객체만 직렬화 된다. (위 1,2와 다른 결과)_ 
+  
+4. **부모만 Non-Serializable 하고, 부모소스는 다른 벤더에서 만큰 클래스가 소스의 수정불가 / 자식은 Serializable 할 때**   
+ 
+	_자식 클래스에 아래의 2개의 메소드를 추가하고, 이 메소드 안에서,
+	직렬화/역직렬화가 애시당초 불가능한 필드에 대해서는, InputStream/OutputStream이 제공하는
+	메소드로 직접 입/출력을 수행하고, 나머지 Serializable 한 필드는 JVM이 하듯이 동일하게 처리._  
+	```java
+	private void writeObject(ObjectOutputStream out) throws IOException { ... }
+	private void readObject(ObjectInputStream in) throws IOException, ClassNotFoundException { ... }
+	```
   
