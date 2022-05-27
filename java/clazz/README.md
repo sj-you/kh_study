@@ -1,3 +1,5 @@
+# Clazz
+
 java.lang.CLass clazz 객체를 얻어내는 방법
 1. 참조타입명.class
 2. 참조변수.get().class()
