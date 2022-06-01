@@ -50,4 +50,37 @@ public class Box<T> {	// 제네릭 타입파라미터 T
     
     ```java
     Product<Car, String> product2 = new Product<>();	// java8 이상 [다이아몬드 연산자 : 타입추론 연산자]
+    ```  
+	
+### 제네릭 메소드
+
+_매개변수 타입과 리턴타입으로 타입 파라미터를 갖는 메소드 이다._
+
+- 제네릭 메소드 선언방법
+    - 리턴타입 앞에 “<>” 기호를 추가하고 타입 파라미터를 기술한다.
+    - 타입 파라미터를 리턴타입과 매개변수에 사용한다.
+    
+    ```java
+    // public <타입파라미터, ...> 리턴타입 메소드명(매개변수, ...) {...}
+    public <T> Box<T> boxing<T t>{...}
+    리턴타입 변수 = <구체적타입> 메소드명(매개값);
+    리턴타입 변수 = 메소드명(매개값)
+    
+    Box<Integer>box = <Integer>boxing(100);
+    Box<Integer>box = boxing(100);
     ```
+    
+    - 구체타입에는 아래와 같이 물음표가 들어갈수 있다.
+    
+    ```sql
+    // <?> 와일드카드 타입(구체타입 그 어떤 참조타입이든 수용한다.)
+    public static void registerCourse(Course<?> coures){;;} // registerCourse
+    ```
+    
+    *<?> 의 범위를 제약하려면 extends 를 이용할수 있으며 부모타입을 지정해주면 된다.*
+    
+    *ex) <? extends Student> =⇒ 학생과  그 하위만 들어갈수 있다. ( 부모가 들어감 )*
+    
+    *extends 대신 super 로 지정할시 지정 클래스 이거나 상위 클래스만 접근이 가능하다* 
+    
+    *ex) <? super Student> =⇒ 학생과 그 상위만 들어갈수 있다. ( 자식이 들어감 )*
