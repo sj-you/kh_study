@@ -30,4 +30,19 @@
 
   int num = intSupplier.getAsInt();
   System.out.println("눈의 수 : " + num);
-  ```
+  ```  
+  
+- Function 인터페이스  
+*매개값과 리턴값이 모두 있는 추상 메소드를 가진다*  
+*주로 매개값을 리턴값으로 매핑(타입변환) 할 경우 사용*  
+
+    ```java
+    printString( t -> t.getName() ); 	// 학생이름으로 반환
+
+    public static void printString(Function<Student, String> function) {
+                for(Student student : list) {
+                    System.out.print(function.apply(student) + " ");
+                }
+                System.out.println();
+            }; // printString
+    ```
