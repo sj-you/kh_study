@@ -46,3 +46,39 @@
                 System.out.println();
             }; // printString
     ```
+- Operator( 연산, 가공 )  
+*매개값과 리턴값이 모두 있는 추상메소드를 가지며 매개값을 연산하고 결과를 리턴할 경우 사용*  
+```java
+public static int maxOrMin(IntBinaryOperator operator) {
+		int result = scores[0];
+		
+		for(int score : scores) {
+			result = operator.applyAsInt(result, score); // 버블정렬과 비슷
+		} // enhanced for
+		
+		return result;
+	} // maxOrMin
+```    
+
+- Predicate 함수적 인터페이스
+*매개값을 조사해 true 또는 flase을 리턴할때 사용*  
+```
+💡 매개값 → Predicate  → boolean
+```
+```java
+public static void main(String[] args) {
+		double maleAvg = avg( t -> t.getSex().equals("남자") );
+		System.out.println("남자 평균 점수 : " + maleAvg);
+
+public static double avg(Predicate<Student> predicate) {
+		int count = 0, sum = 0;
+		for(Student student : list) { // 가져와서 한개씩 대입
+			if(predicate.test(student)) { 
+				count++;
+				sum += student.getScore(); // 점수 가져옴
+			} // if	
+		} // enhanced for
+		
+		return (double) sum / count;
+	} // avg
+```
