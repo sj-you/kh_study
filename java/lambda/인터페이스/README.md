@@ -12,7 +12,48 @@ _처리결과를 리턴하지 않고 함수적 인터페이스의 호출 순서�
   
 - Operator 와 Function  
 _먼저 실행한 함수적 인터페이스의 결과를 다음 함수적 인터페이스의 매개값으로 넘겨주고
-최종결과 리턴._  
+최종결과 리턴._    
+
+- andThen()
+
+```java
+인터페이스 AB = 인터페이스A.andThen(인터페이스B);
+최종결과 = 인터페이스AB.method();
+```
+
+출력 : *consumerA : 홍길동   →   consumerB : hong*
+
+```java
+Consumer<Member> consumerA = m -> System.out.println("consumerA : " + m.getName());
+Consumer<Member> consumerB = m -> System.out.println("consumerB : " + m.getId());
+
+Consumer<Member> consumerAB = consumerA.andThen(consumerB); // A와 B를 연결
+consumerAB.accept(new Member("홍길동", "hong", null));
+
+```
+
+FunctionAndThen
+
+```java
+Function<Member, Address> functionA;
+Function<Address, String> functionB;
+
+Function<Member, String> functionAB;
+
+String city;
+		
+functionA = m -> m.getAddress();
+functionB = a -> a.getCity(); 		
+
+// A의 값을 B로 넘긴후 B에서 최종처리
+functionAB = functionB.compose(functionA); // 반대로 (익명구현객체 먼저 생성)
+//		functionAB = functionA.andThen(functionB); // 연결
+
+Member member = new Member("홍길동", "hong", new Address("한국", "서울"));
+city = functionAB.apply(member);
+
+System.out.println("거주도시 : " + city);
+```
 ---
 - Consumer 인터페이스
     
