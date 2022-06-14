@@ -48,4 +48,12 @@ FROM EMPLOYEES;
     
   ```sql
   SELECT DISTINCT JOB_ID FROM EMPLOYEES;
-  ```
+  ```  
+  
+  
+- 자동  형변환  
+  _‘<NUMBER> <-> <CHARACTER> <-> <DATE> 간에는, 자동형변환이 됨!!! (*****)_  
+  _따라서, 아래의 조건식은 <DATE> > <CHARACTER> 의 비교식으로 자동형변환에 의해, 당연히 비교가 가능해진다!_  
+- 강제 형변환  
+  _개발도구별 포맷 방식이 다르기 때문에 지정한다._  
+  _자동형변환을 포기하고, 강제형변환 함수인 to_date()로 직접 DATE 타입으로 형변환시켜서, 비교하는 이유는 가독성 확보 이다._  
