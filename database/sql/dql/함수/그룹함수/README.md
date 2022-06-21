@@ -23,43 +23,43 @@ _GROUP BY_
         employees;
     ```
 
-AVG(집계함수)
+- AVG(집계함수)  
+   
+    _평균을 구해준다_  
 
-- 평균을 구해준다
+    ```sql
+    -- AVG
+    SELECT
+        sum(salary),
+        avg(salary)
+    FROM
+        employees;
+    ```
 
-```sql
--- AVG
-SELECT
-    sum(salary),
-    avg(salary)
-FROM
-    employees;
-```
+- MIN / MEX  
+  
+    _최대/최소값을 구한다_
 
-MIN / MEX
+    ```sql
+    -- MIN / MEX
+    SELECT
+        MIN(salary),
+        MAX(salary)
+    FROM
+        employees;
+    ```
 
-- 최대/최소값을 구한다
+- COUNT(행의 개수를 카운트 한다)  
 
-```sql
--- MIN / MEX
-SELECT
-    MIN(salary),
-    MAX(salary)
-FROM
-    employees;
-```
+    ```sql
+    -- COUNT
 
-COUNT(행의 개수를 카운트 한다)
-
-```sql
--- COUNT
-
-SELECT
-    count(last_name),
-    count(commission_pct) -- NULL 제외 후 카운트
-FROM
-    employees;
-```
+    SELECT
+        count(last_name),
+        count(commission_pct) -- NULL 제외 후 카운트
+    FROM
+        employees;
+    ```
 
 HAVING ( GROUP BY 이후 조건식)
 
