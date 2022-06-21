@@ -1,7 +1,7 @@
 # 그룹 함수  
 _GROUP BY_  
   
-    ```
+
     - **주의사항**
     - GROUP BY뒤에, column alias or index 사용 불가하다
     - GROUP BY뒤에 명시된 컬럼은 SELECT절에 그룹함수와 사용 가능
@@ -10,7 +10,7 @@ _GROUP BY_
     - HAVING 절을 사용해, 그룹핑한 후 행이아니라 그룹을 제외할수 있다.
     - WHERE 절에는 그룹함수를 사용할수 없다.
     - NULL도 생성할수 있다.
-    ```
+
 
 - SUM (그룹처리 함수)
 
