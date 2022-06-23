@@ -80,39 +80,38 @@ WHERE
     e.salary BETWEEN g.lowest_sal AND g.highest_sal;
 ```
 
-Self Join
+- Self Join  
+  
+    *하나의 테이블만 사용하여, 자기자신을 조인하는 것을 의미.*  
 
-*하나의 테이블만 사용하여, 자기자신을 조인하는 것을 의미.*
+    ```sql
+    SELECT
+        e.employee_id AS 직원사번,
+        e.last_name AS 사원명,
+        e.manager_id AS 관리자사번1,
+        m.employee_id AS 관리자사번2,
+        m.last_name AS 관리자명
+    FROM
+        employees e,-- 사번
+        employees m -- 관리자(복제)
+    WHERE
+        e.manager_id = m.employee_id;
+    ```
 
-```sql
-SELECT
-    e.employee_id AS 직원사번,
-    e.last_name AS 사원명,
-    e.manager_id AS 관리자사번1,
-    m.employee_id AS 관리자사번2,
-    m.last_name AS 관리자명
-FROM
-    employees e,-- 사번
-    employees m -- 관리자(복제)
-WHERE
-    e.manager_id = m.employee_id;
-```
+- Outer join ( Left or Right )  
+    *동등조인에서 탈락한 튜플을 삽입하는 것을 말한다.*  
 
- Outer join ( Left or Right )
-
-*동등조인에서 탈락한 튜플을 삽입하는 것을 말한다.*
-
-*(+)를 사용할때 살리고자 하는 반대편에 배치한다.*
-
-```sql
-SELECT
-    e.employee_id AS 사원번호,
-    e.manager_id AS 관리자번호,
-    e.last_name AS 사원명,
-    m.last_name AS 관리자명
-FROM
-    employees e,
-    employees m
-WHERE
-    e.manager_id = m.employee_id(+);  -- 사원에서 탈락한 사원 살리기
-```
+    *(+)를 사용할때 살리고자 하는 반대편에 배치한다.*  
+ 
+    ```sql
+    SELECT
+        e.employee_id AS 사원번호,
+        e.manager_id AS 관리자번호,
+        e.last_name AS 사원명,
+        m.last_name AS 관리자명
+    FROM
+        employees e,
+        employees m
+    WHERE
+        e.manager_id = m.employee_id(+);  -- 사원에서 탈락한 사원 살리기
+    ```
