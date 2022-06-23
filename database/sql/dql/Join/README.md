@@ -51,4 +51,68 @@ WHERE
 *조인조건을 우선 명시하고 나중에 검색조건을 명시하는 방법으로, 가동석을 향상*
 - 테이블 별칭
     
-    *테이블 별칭을 지정한 경우 반드시 별칭을 사용하여 참조해야 한다*
+    *테이블 별칭을 지정한 경우 반드시 별칭을 사용하여 참조해야 한다*  
+    ```sql
+    SELECT
+        last_name,      -- 모호성이 없으므로 생략가능
+        dept.department_name,
+        emp.department_id
+    FROM
+        employees emp,
+        departments dept
+    WHERE
+        emp.department_id = dept.department_id;
+    ```  
+    Non-equal Join (비 동등 조인)
+
+*조인대상이 범위값으로 되어있는 경우*
+
+```sql
+-- 급여등급 Join
+SELECT                      
+    last_name,
+    salary,
+    grade_level
+FROM
+    employees e,
+    job_grades g
+WHERE
+    e.salary BETWEEN g.lowest_sal AND g.highest_sal;
+```
+
+Self Join
+
+*하나의 테이블만 사용하여, 자기자신을 조인하는 것을 의미.*
+
+```sql
+SELECT
+    e.employee_id AS 직원사번,
+    e.last_name AS 사원명,
+    e.manager_id AS 관리자사번1,
+    m.employee_id AS 관리자사번2,
+    m.last_name AS 관리자명
+FROM
+    employees e,-- 사번
+    employees m -- 관리자(복제)
+WHERE
+    e.manager_id = m.employee_id;
+```
+
+ Outer join ( Left or Right )
+
+*동등조인에서 탈락한 튜플을 삽입하는 것을 말한다.*
+
+*(+)를 사용할때 살리고자 하는 반대편에 배치한다.*
+
+```sql
+SELECT
+    e.employee_id AS 사원번호,
+    e.manager_id AS 관리자번호,
+    e.last_name AS 사원명,
+    m.last_name AS 관리자명
+FROM
+    employees e,
+    employees m
+WHERE
+    e.manager_id = m.employee_id(+);  -- 사원에서 탈락한 사원 살리기
+```
