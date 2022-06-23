@@ -63,22 +63,22 @@ WHERE
     WHERE
         emp.department_id = dept.department_id;
     ```  
-    Non-equal Join (비 동등 조인)
+- Non-equal Join (비 동등 조인)
 
-*조인대상이 범위값으로 되어있는 경우*
-
-```sql
--- 급여등급 Join
-SELECT                      
-    last_name,
-    salary,
-    grade_level
-FROM
-    employees e,
-    job_grades g
-WHERE
-    e.salary BETWEEN g.lowest_sal AND g.highest_sal;
-```
+    *조인대상이 범위값으로 되어있는 경우*  
+  
+    ```sql
+    -- 급여등급 Join
+    SELECT                      
+        last_name,
+        salary,
+        grade_level
+    FROM
+        employees e,
+        job_grades g
+    WHERE
+        e.salary BETWEEN g.lowest_sal AND g.highest_sal;
+    ```
 
 - Self Join  
   
