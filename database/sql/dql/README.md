@@ -98,4 +98,49 @@ FROM EMPLOYEES;
     
   
   
-  
+ - 인라인 뷰 (InLine View)
+    
+    *일반적으로, FROM 절에는 테이블이 와야 하지만, 서브쿼리가 마치 하나의 가상의 테이블처럼 사용가능*
+    
+
+장점 
+
+*실제로 FROM 절에서 참조하는 테이블의 크기가 클 경우에,
+필요한 행과 컬럼만으로 구성된 집합(Set)을 재정의하여,
+쿼리를 효율적으로 구성가능.*
+
+```sql
+-- Basic Syntax)
+
+SELECT select_list
+FROM ( sub-query ) alias
+[ WHERE 조건식 ];
+```
+
+예시
+
+```sql
+SELECT
+    e.department_id,
+    d.department_name,
+    총합,
+    평균,
+    인원수
+FROM
+    ( -- 인라인뷰
+        SELECT
+            department_id,
+            sum(salary) AS 총합,
+            avg(salary) AS 평균,
+            count(*) AS 인원수
+        FROM
+            employees
+        GROUP BY
+            department_id
+    ) e,
+    departments d
+WHERE
+    e.department_id = d.department_id -- 조인(공통컬럼지정)
+ORDER BY
+    1 ASC;
+```
