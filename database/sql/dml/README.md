@@ -13,7 +13,7 @@
 
   *COMMIT을 하면 저장하며 ROLLBACK을 수행하면 변경내역을 취소한다.*
 
-### INSERT
+## INSERT
     
 - INSERT   
 *테이블에 데이터를 저장하기 위한 문장이다.*    
