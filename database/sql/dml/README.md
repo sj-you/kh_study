@@ -164,3 +164,37 @@ SET                -- 변경할 한개 이상의 컬럼명=값 형식 지정
  [컬럼명n = (Sub-query N)]
 [WHERE 조건식];
 ```
+  
+
+
+## DELETE
+
+*테이블에 지정된 데이터를 삭제하며 한번에 여러 행들을 삭제 가능하다.*  
+
+```sql
+BEGIN
+    DELETE FROM mydept
+    WHERE deptno = 30;  -- 30번 삭제
+
+    ROLLBACK;
+END;
+```
+
+서브쿼리를 이용한 DELETE
+
+*이 방법을 사용하면, 기존 테이블에 저장된 데이터를 사용하여,  현재 테이블의 특정 데이터 삭제가능.*  
+
+*서브쿼리의 실행결과 값의 개수와 타입이, 메인쿼리의 WHERE절에 지정된 조건식의 컬럼의 개수와 타입이 반드시 동일해야 한다*  
+
+```sql
+BEGIN
+    DELETE FROM mydept
+    WHERE (loc, dnmae) = (  -- 다중컬럼 조건식 지정
+        SELECT loc, dname
+        FROM dept
+        WHERE deptno = 20
+    )
+
+    ROLLBACK;
+END;
+```
