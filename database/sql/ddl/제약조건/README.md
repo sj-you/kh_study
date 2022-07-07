@@ -40,4 +40,25 @@
 - PRIMARY KEY  :   table_column_pk
 - FOREIGN KEY  :   table_column_fk
 - CHECK             :   table_column_ck
+```  
+
+제약조건 예시
+
+```sql
+CREATE TABLE department2(
+    deptno NUMBER(2),  -- 여기서 작성해도 무관하다.
+    dname VARCHAR2(15),
+    loc VARCHAR2(15),
+
+    CONSTRAINT department2_deptno_pk PRIMARY KEY (deptno)
+);
 ```
+
+-  USER_CONSTRAINTS 데이터 사전  
+
+*특정 테이블의 제약조건 확인 (어떤 컬럼에 제약조건이 설정되어 있는지 확인불가)  
+제약조건 타입(CONSTRAINT_TYPE 컬럼):  
+P: PRIMARY KEY, R: FOREIGN KEY, U: UNIQUE,  
+C: NOT NULL, CHECK (NOT NULL 제약조건은, NULL 값을 체크하는 조건으로 처리)*
+  
+USER_CONSCOLUMNS : 제약조건을 확인하는 용도  
