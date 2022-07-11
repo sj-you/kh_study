@@ -24,3 +24,40 @@ TRUNCATE  - DB객체(= Oracle 객체) 정보 절삭
 
 동의어(Synonym) - 테이블의 별칭  
 *객체에 대한 동의어를 설정하기 위한 객체*  
+  
+  
+- ON DELETE SET NULL
+    
+    *참조하는 부모 테이블의 행이 삭제되면, 해당 행을 참조하는 자식 테이블의 컬럼값을 NULL로 설정한다.*
+    
+    ```sql
+    CREATE TABLE emp02(
+        empno   NUMBER(4)
+            CONSTRAINT emp02_empno_pk PRIMARY KEY,
+        ename   VARCHAR2(15),
+        deptno  NUMBER(2)
+            CONSTRAINT emp02_deptno_fk
+                REFERENCES dept02(deptno) s -- 삭제시 참조값 NULL
+    );
+    ```
+    
+
+- Flashback Drop
+
+```
+💡 나. 테이블 삭제할 때, (DROP TABLE tablename;)
+삭제된 테이블은 휴지통(RECYCLEBIN)이라는 특별한 객체에,
+ 'BIN$' prefix가 붙은, 이름으로 저장됨.
+```
+
+```
+💡 3. 삭제된 테이블을 다시 복구하고 싶을 때, Flashback Drop
+복구기술을 이용하여, 휴지통(RECYCKEBIN) 객체에서, 삭제된
+테이블을 복구할 수 있다.
+```
+
+데이터 사전(Data Dictionary Viwe)  
+
+1.  DBA_XXXX : 데이터베이스 관리자만 접근가능한 객체 등의 정보조회
+2.  ALL_XXXX : 자신계정 소유 또는 권한을 부여받은 객체 등에 관한 정보조회
+3.  USER_XXXX: 자신의 계정이 소유한 객체 등에 관한 정보조회
