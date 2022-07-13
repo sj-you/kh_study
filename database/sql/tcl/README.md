@@ -4,7 +4,6 @@
 
 *COMMIT, ROLLBACK, SAVEPOINT*
 
-### TCL (Transaction Control Language)
 
 ---
 
