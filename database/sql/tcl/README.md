@@ -20,13 +20,15 @@ Transaction (트랜잭션)
 - **COMMIT (All)**
 *DML문에 의해 실행되었으나, 아직 저장되지 않은 모든 데이터를  
 데이터베이스에 저장하고, 현재의 트랜잭션 종료시킴.*  
-****
+
+  
 - **ROLLBACK [TO SAVEPOINT savepoint] (Nothing)**     
 *저장되지 않은 모든 DB변경사항 취소하고, 현재의 트랜잭션을  
 종료시킴. 트랜잭션 시작 이전의 상태로 복구.  
 TO SAVEPOINT 키워드 사용하면, 지정된 SAVEPOINT까지만  
 DB변경사항 취소가능 (Partial Rollback)*  
-****
+
+  
 - **SAVEPOINT**  
 *진행중인 트랜잭션을, 특정이름으로 지정(like 책갈피)  
 지정된 이름의 상태로, 실행된 DML 작업의 취소가능  
