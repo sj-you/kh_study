@@ -1,6 +1,6 @@
 
     
-#TCL - Transaction Control Language (트랜잭션 제어 언어)
+# TCL - Transaction Control Language (트랜잭션 제어 언어)
 
 *COMMIT, ROLLBACK, SAVEPOINT*
 
