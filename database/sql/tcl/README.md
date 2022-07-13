@@ -5,8 +5,6 @@
 *COMMIT, ROLLBACK, SAVEPOINT*
 
 
----
-
 Transaction (트랜잭션)
 *1. DB의 논리적인 작업단위
 2. 분리될 수 없는, 한개 이상의 DB조작을 의미
