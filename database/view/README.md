@@ -10,7 +10,7 @@
     *복잡성을 가지며 매번 필요시, 같은 조인쿼리를 사용하지 않고 뷰로*  
     *작성한다.*  
 
-- 단순 View (= Simple View)
+### 단순 View (= Simple View)
 
 1. *하나의 기본 테이블(Base table) 에 대해 정의한 View*
 2. *By defaujlt, View 에 대해 DML 문장 실행 가능*
