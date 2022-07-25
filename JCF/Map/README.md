@@ -1,12 +1,16 @@
 
+# Map
+
 *키와 값이 쌍으로 지정되며 키는 중복이 불가하다*
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/f7d24bc4-37d8-4a87-b75f-fbafbe49c5ae/Untitled.png)
+![캡처](https://user-images.githubusercontent.com/88135939/180714466-bfbcc1cc-ae09-435a-a195-bd7fb677a6ce.JPG)
+
 
 HashMap
 
 *키 객체는 hashCode()와 equals()를 재정의해 동등 객체가 될 조건을 정해야 한다.*
-
+  
+  
 ```java
 Map<String, String> map = new HashMap<>();
 ```
