@@ -70,3 +70,19 @@ html special character 검색후 기호를 찾아볼수 있다.
         <li>Lorem ipsum dolor sit amet consectetur.</li>
     </ol>
 ```
+### tag 공통 적용 가능 속성
+![image](https://user-images.githubusercontent.com/88135939/181699126-84646246-b79a-46f1-91c0-15e928e71877.png)
+![image](https://user-images.githubusercontent.com/88135939/181699188-6c0e2e05-b70c-4844-80e8-762989ed40b7.png)  
+
+  
+### 웹 사이트간 이동
+href : 연결하고자 하는 웹 사이트의 URL 지정
+
+target : 링크를 클릭했을때 웹 사이트가 열릴 곳 지정
+
+```html
+_blank : 새로운 창으로 연다
+_self : 현제 브라우저 창에 연다( 기본 )
+_parent 부모 브라우저에 연다
+_top : 전체에 연다.
+```
