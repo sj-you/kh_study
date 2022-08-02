@@ -85,4 +85,87 @@ _blank : 새로운 창으로 연다
 _self : 현제 브라우저 창에 연다( 기본 )
 _parent 부모 브라우저에 연다
 _top : 전체에 연다.
-```
+```  
+
+- 웹 사이트 간 이동
+    
+    href : 연결하고자 하는 웹 사이트의 URL 지정
+    
+    target : 링크를 클릭했을때 웹 사이트가 열릴 곳 지정
+    
+    ```html
+    _blank : 새로운 창으로 연다
+    _self : 현제 브라우저 창에 연다( 기본 )
+    _parent 부모 브라우저에 연다
+    _top : 전체에 연다.
+    ```
+    
+
+- 정의형 목록
+    
+    *항목은 dt, 정의는 dd 테그를 이용한다.*
+    
+    ```html
+    <dl>
+        <dt>lodd</dt>
+        <dd>- sdsd</dd>
+        <dt>sdsdsd</dt>
+        <dd>- sdsdsddd</dd>
+    </dl>
+    ```
+    
+
+- 임베디드 테그
+    
+    ![image](https://user-images.githubusercontent.com/88135939/182309628-1d2496c8-a406-4970-bc94-4064c0d374fc.png)
+    
+
+- <source>
+    
+    *여러 형식의 오디오 파일을 동시에 제공할 때 사용하고,*
+    
+    *재생에 적합한 파일이 없다면 마지막 문장을 출력한다.*
+    
+
+- <audio> 속성
+    
+    ```html
+    controls : 재생 제어기 표시
+    
+    loop : 반복재생
+    
+    autoplay : 열림과 동시 실행
+    
+    muted : 음소거 시작
+    
+    preload : 사용여부 상관 없이 미리 다운로드
+    ```
+    
+
+- <imbed>
+    
+    html 페이지 안에서 다른 프로그램을 구동시킨다,
+    
+
+- optgroup
+    
+    *그룹으로 묶어서 옵션을 지정할 수 있다*
+    
+    ```html
+    <optgroup label="computer">
+        <option value="1">Software</option>
+        <option value="2">Robot</option>
+        <option value="3">System</option>
+    </optgroup>
+    ```
+    
+- iframe
+    
+    다른 사이트나 HTML 문서를 불러올수 있다.
+    
+    ```html
+    <body>
+        <iframe src="br_p.html" frameborder="0"></iframe>
+        <iframe src="http://www.w3.org" frameborder="0"></iframe>
+    </body>
+    ```
