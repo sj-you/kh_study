@@ -20,7 +20,7 @@
 <input type="reset" value="초기화">
 ```
 
-HTTP method
+### HTTP method
 
 *하나의 from 양식의 데이터를 지정된 서버(action속성의 값) 프로그램에 보내는 방식을 의미한다. 대표적으로 get 과 post가 있다.*
 
