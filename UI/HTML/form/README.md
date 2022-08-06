@@ -69,3 +69,48 @@ select (이메일 작성)
     </select>
 </form>
 ```
+
+
+---
+
+### all form
+
+```html
+<form accept="http://localhost:8080/serverProgram" method="post">
+    1. search: <input type="search" name="keyword"><br> <!--검색기능 --> 
+    2. tel: <input type="tel" name="tel" pattern="[0-9]{3}-[0-9]{4}-[0-9]{4}" 
+            placeholder="000-0000-0000"><br>  <!--전화번호 --> 
+    3. url: <input type="url" name="url"><br>  <!--url --> 
+    4. email: <input type="email" name="email"><br>  <!-- E-mail --> 
+    5. date: <input type="date" name="today"><br>  <!-- 년/월/일 -->
+    6. month: <input type="month" name="month"><br>  <!-- 년/월(입력가능) -->
+    7. week: <input type="week" name="week"><br>  <!-- 년/주 -->
+    8. time: <input type="time" name="now"><br>  <!-- 시간 설정(시:분) -->
+    9. datetime-local <input type="datetime-local" name="localDT"><br>  <!-- 위치 날자 시간 -->
+    10. number: <input type="number" name="age" min="0" max="120"><br>  <!-- 숫자 -->
+    11. range: <input type="range" name="height" min="50" max="300"><br>  <!-- 범위값 -->
+    12. color: <input type="color" name="color"><br>  <!-- 색상 조정 -->
+    13. img: <input type="image"src="https://picsum.photos/id/684/200/200"
+                name="myImage"><br><!-- img(submit) -->
+    14. textarea: <textarea name="lines" cols="30" rows="10"></textarea><br><!-- text 양식 크기 --> 
+    15. fieldset: <fieldset>
+                    id: <input type="text" required>
+                    pw: <input type="text">
+                    </fieldset><br> <!-- text 양식 크기 -->
+    16. datalist: 
+                    My browser: <input list="browser" name="MyBrowser">  
+                    <datalist id="browser">
+                        <option value="Chrome"></option>
+                        <option value="Edge"></option>
+                        <option value="asd"></option>
+                    </datalist><br><!-- 선택입력(콤보박스) -->
+    17. progress: <progress max="100" value="30" name="currprog"></progress> <br>
+    18. meter: <meter max="100" value="30" name="meter" ></meter><br><!-- 측량값 -->
+    <!-- required 입력시 필수입력 -->
+
+    <p></p>
+
+    <input type="submit" value="전송">
+
+</form>
+```
