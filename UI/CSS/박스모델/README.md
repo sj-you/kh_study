@@ -18,5 +18,7 @@ margin: 경계선 외부의 간격을 의미한다. (겹치는 영역이다)
       - 값을 지정하지 않아도 기본으로 값이 생기는데 
         필요 없을시 0으로 지정해준다.
 ```
+![image](https://user-images.githubusercontent.com/88135939/183874912-ba3a50a9-2d38-431e-9f45-2635411b534e.png)
+![image](https://user-images.githubusercontent.com/88135939/183874981-938cb136-6397-40e1-8c61-9bfb0c4eb3bf.png)
 
-![KakaoTalk_20220608_204015105.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/908abeda-0ad4-44b9-82dd-cf5537c67da3/KakaoTalk_20220608_204015105.png)
+
