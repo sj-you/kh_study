@@ -21,4 +21,11 @@ margin: 경계선 외부의 간격을 의미한다. (겹치는 영역이다)
 ![image](https://user-images.githubusercontent.com/88135939/183874912-ba3a50a9-2d38-431e-9f45-2635411b534e.png)
 ![image](https://user-images.githubusercontent.com/88135939/183874981-938cb136-6397-40e1-8c61-9bfb0c4eb3bf.png)
 
-
+- border-style
+![image](https://user-images.githubusercontent.com/88135939/184112989-73fbcda6-1c95-4480-b07b-4ba54fb04efc.png)
+  
+  
+- border-radius (둥근 모서리)
+    
+    *테두리의 모서리를 둥글게 해준다.*
+    ![image](https://user-images.githubusercontent.com/88135939/184113062-cc437673-c978-4e5b-9cb3-b918bd1edad8.png)
