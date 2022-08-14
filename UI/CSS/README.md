@@ -45,3 +45,34 @@ HTML을 보조하여 웹 페이지, 글자 등을 도와주는 요소이다.
 - CSS reset
     
     *Layout 작업시 가장 처음에 해주는 스타일 작업으로 박스영역의 컨텐츠 영역만 살려서, 요소배치를 더 쉽게 하기 위해 한다.*
+    
+배경이미지 반복 
+
+```html
+<style>
+    body{
+        background-image: url("https://picsum.photos/200/200");
+        background-repeat: no-repeat; <!--반복안함 -->
+    }
+    #button{
+        margin: 325 0 0 60px;
+    }        
+</style>
+```
+
+- 외부 CSS 불러오기
+    
+    *<head> 안에 작성하면 된다.*
+    
+    !important : *강제로 적용한다.*
+    
+    ```html
+    <link rel="stylesheet" href="css/01_css.css">
+    ```
+    
+
+- 변이 효과
+    
+    ```html
+    transition: all 1.5s linear 0.5s;
+    ```
