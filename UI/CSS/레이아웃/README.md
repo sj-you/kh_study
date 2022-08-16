@@ -5,5 +5,5 @@
 - float 속성
     
     *웹 페이지에 요소를 왼쪽 또는 오른쪽에 배치하며 blook상태인 요소도 인라인처럼*  
-    *처리가 가능하다.*
+    *처리가 가능하다.*  
     ![image](https://user-images.githubusercontent.com/88135939/184818757-39bec5b5-009a-4b44-8529-980e45ca41c5.png)
