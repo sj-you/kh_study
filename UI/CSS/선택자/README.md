@@ -11,7 +11,7 @@
 ```
 ![image](https://user-images.githubusercontent.com/88135939/185569259-681c8c81-6acc-4677-a1c3-be53cae748b7.png)
 
-## 가상선택자
+### 가상선택자
 
 1. 이벤트 가상 클래스 선택자
 2. 구조적 가상 클래스 선택자
