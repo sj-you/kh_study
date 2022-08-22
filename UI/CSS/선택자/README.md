@@ -22,3 +22,16 @@
 
    *사용자가 마우스 이벤트 행위를 어떻게 하는지에 따라서 스타일 시트가 자르게 적용*
     ![image](https://user-images.githubusercontent.com/88135939/185776577-572dde25-28f7-4a58-9ba0-3d4e34719668.png)
+
+- 구조적 가상 클래스 선택자  
+ ![image](https://user-images.githubusercontent.com/88135939/185859434-b7d148fb-dd36-49f6-90ba-2d4e5097c866.png)  
+  
+ - UI요소 가상 클래스 선택자
+    
+    *입력 폼의 상태를 선택할때 사용한다.*  
+    ![image](https://user-images.githubusercontent.com/88135939/185859530-af639ff2-f34d-4c1a-88c6-81829b803f8b.png)
+
+- 조합선택자
+    
+    *기존의 여러 선책자를 복합적으로 조합하는 방법을 제공*  
+    ![image](https://user-images.githubusercontent.com/88135939/185859639-60a76ab8-db90-4b29-87c0-67be5059dbaa.png)
