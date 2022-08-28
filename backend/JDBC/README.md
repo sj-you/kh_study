@@ -1,11 +1,11 @@
 # JDBC (java Database Connectivity)
 
-구성요소
+### 구성요소
 
 1. JDBC API  ⇒ 인터페이스(규격만 정의)
 2. JDBC Deiver
   
-순서
+### 순서
 
 (0) java.sql.DriverManager (Class) ⇒ 연결  
 (1) java.sql.Connection (interface)  
