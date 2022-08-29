@@ -16,3 +16,33 @@
   
 자원객체를 닫는 순서가 정해져 있고, 이를 반드시 지켜야 된다.  
 (4) > (2) 또는 (3) > (1)
+
+### Target DB에 접근 필수 요소
+
+1. jdbc URL
+    
+    접속방법
+    
+    *EZCONMENT : 접속IP주소, 접속 포트번호, 접속DB이름*
+    
+    *TNSNAMES : EZCONMENT 의 3가지 정보를 가지고 있는 별칭을 이용*
+    
+    표기법
+    
+    *jdbc:<vendor>:thin:@IP주소:Port번호/접속DB명*
+    
+    *jdbc:<vendor>:thin:@네트워크 별칭 (tnsname.ora 파일 경로 지정 필요 By 환경변수)*
+    
+    ```java
+    // JDBC Driver 연결
+    private static String jdbcUrl = "jdbc:oracle:thin:@db20220510182126_high?TNS_ADMIN=C:/opt/OralcleCloudWallet/ATP";
+    private static String driverClass = "oracle.jdbc.OracleDriver";
+    private static String user = "HR";
+    private static String pass = "Oracle12345678";
+    ```
+    
+    driverClass 는 지정을 해주지 않아도 된다,!
+    
+2. Driver Class”s FQCN
+3. USER
+4. Pass
