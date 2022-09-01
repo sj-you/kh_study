@@ -37,3 +37,43 @@
     log.trace("tearDown() invoked.");
     }
 ```
+
+---    
+    
+### JUnit ver 5x
+
+테스트 클래스로부터, 테스트 객체를 생성하는 방법이 2가지이다 (@TestInstance)
+
+1. PER_CLASS -> 1개만 생성
+2. PER_METHOD -> 테스트 메소드 수행마다
+
+테스트 메소드의 순서를 정할수 있다. (@TestMethodOrder)
+
+구성
+
+@BeforeAll
+
+@BeforeEach
+
+@Test → 속성지정가능
+
+```java
+@Test
+@Order(2) // 실행순서
+@DisplayName("contentLoad1") // 이름
+@Timeout(value=1, unit = TimeUnit.SECONDS) // 타임아웃
+void contentLoad1() {
+  log.trace("contentLoad1() invoked");
+}
+```
+
+@AfterEach
+
+@AfterAll
+
+Clazz 가져오기
+
+1. 타입명.class
+2. 참조변수명.getClass()
+3. Class.forName(문자열타입의 FQCN)
+
