@@ -7,7 +7,7 @@
 
   숙지 어노테이션
 
-  1. @Before : 테스트(@Test) 수행전, 사전준비작업이 필요할때
+  1. @Before : 테스트(@Test) 수행전, 사전준비작업이 필요할때 사용한다.
 
   ![image](https://user-images.githubusercontent.com/88135939/187611017-ffa9a40b-b80b-4efd-8826-24b07a3166a3.png)
 
