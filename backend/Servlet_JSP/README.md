@@ -1,6 +1,6 @@
 # Servlet/JSP
 
-### JSP
+## JSP
 
 Web Application 규약
 
