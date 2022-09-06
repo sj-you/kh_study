@@ -26,3 +26,7 @@ public void init(ServletConfig config) throws ServletException {
 	super.init(config);
 } // init-config
 ```
+### 공유 데이터 영역
+
+*영역의 크기는 1~4 순이다.(1이 가장 크다)*  
+![image](https://user-images.githubusercontent.com/88135939/188564631-a0e16143-f317-4486-aa2a-7068176a488c.png)
