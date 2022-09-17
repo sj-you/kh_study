@@ -50,3 +50,32 @@ throws IOException, ServletException {
 	chain.doFilter(req, res);	// req에 대한 선처리와 res 에 대한 후처리를 제어하는 호출
 } // doFilter
 ```
+
+    
+## Request forwarding
+
+화면전환 기법
+
+### 방법 1
+
+RequestDispatcher 객페의 forward기법
+
+*/Response 로 매핑된 코드를 실행 ( 주소는 변경 X )*
+
+```java
+// 바인딩
+req.setAttribute("username", "홍길동");
+req.setAttribute("useraddress", "서울");
+
+// forward (위임) // 
+RequestDispatcher dis = req.getRequestDispatcher("/Response");
+dis.forward(req, res);
+```
+
+### 방법 2 (리다이렉션 기법)
+
+*Response 객체의 sendRedirect 메소드를 이용하는 방법 (위임이 아니라 변경이다.)*
+
+```
+ex) response.sendRedirect(target); => target으로 URL주소가 변경됨 (****)
+```
