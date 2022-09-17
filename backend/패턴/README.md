@@ -30,7 +30,7 @@ V  = View   : Model 데이터를 이용한, 응답화면을 생성
 C  = Controller   : MVC 흐름을 제어  
 
 ```java
-하나의 Servlet 이다!
+하나의 Servlet 이다
 모든 Request Message를 받는 집중화 수행
 (적용패턴: Front Controller Pattern)
 이를 위해, url-pattern mapping 에 달려있다!
