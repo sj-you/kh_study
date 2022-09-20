@@ -109,3 +109,33 @@ ex) response.sendRedirect(target); => target으로 URL주소가 변경됨 (****)
 2. *두번째 이상 요청부터는 동일한 웹사이트로 요청을 보낼때 마다 반드시,*
 
 *해당 웹사이트 주소로 보관된 쿠키 요청이 존재한다면 그 파일을 다시 로드*
+
+### mimeType
+
+*파일을 텍스트 기반으로 변환하는 것이다.*
+
+파일 업로드
+
+```java
+// uuid 생성
+String uuid = UUIDGenerator.generateUniqueKeysWithUUIDAndMessageDigest();
+	        		
+part.write(uuid); // uuid명으로 지정 경로에 저장
+part.delete();
+```
+
+파일 다운로드
+
+```java
+ServletContext sc = req.getServletContext();
+String mimeType = sc.getMimeType(file_name);
+
+if(mimeType == null) {
+	mimeType = "application/octet-stream";
+} // if
+
+// "Content-Disposition", "attachment; filename=원본파일이름"
+// 주의 : 원본파일명 ASCII(ISO-8859-1) 문자집합으로 인코딩 uuid -> 원본 이름 
+String encodedFN = new String(file_name.getBytes("utf8"), "ISO-8859-1");
+res.addHeader("Content-Disposition", "attachment; filename="+encodedFN);
+```
