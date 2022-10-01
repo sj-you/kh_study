@@ -97,3 +97,23 @@ public class AppTest {
 (5) 자동실행시킬 SQL 문장을 가지고 있는 태그의 `id` 속성의 값은, 반드시 
 		아래의 추상메소드의 이름과 동일하게 지정하라!!!
 ```
+
+### Mapper XML 작성법
+
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE mapper
+    PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+    "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="org.zerock.myapp.mapper.TimeMapper"> // 인터페이스 경로
+
+    <select
+    	id="getCurrentTime2"
+    	resultType="java.lang.String">
+        SELECT to_char(current_date, 'yyyy/MM/dd HH24:mi:ss') AS now FROM dual
+    </select>
+
+</mapper>
+```
