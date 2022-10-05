@@ -61,11 +61,11 @@ DTO == Data Transfer Object
 
 기본흐름
 
-***1 ~ 4까지의 단계의 흐름을 제어 ====> Controller
+*1 ~ 4까지의 단계의 흐름을 제어 ====> Controller*
 1. 전송파라미터 수집
 2. 요청식별
 3. 핵심비지로직 처리 => 데이터발생 => Model
-4. 발생데이터 이용해서 화면 제작 ===> View***
+4. 발생데이터 이용해서 화면 제작 ===> View
 
 ![image](https://user-images.githubusercontent.com/88135939/194056399-dd6e12d5-e995-4a05-b9ed-36dfa2595ea7.png)
 
