@@ -7,7 +7,7 @@
     새로운 Logger를 등록하는 것
    
    예: <Logger name="org.springframework" level="info" />
-                   스프링 프레임워크에서 남기는 info 레벨의 로그를 보자!!!
+                   스프링 프레임워크에서 남기는 info 레벨의 로그를 보자!
 
 (2) web.xml     =======> **** (Servlet, listener)
      가. Spring Container 를 생성하는 Listener 가 자동등록 (설정파일: root-context.xml 사용됨)
@@ -41,7 +41,7 @@ http://localhost:8080/resources/video/2.mp4
 ### DTO/VO
     
 ```
-Spring MVC 기반으로 웹어플리케이션 개발시 중요한 2가지 종류의 클래스를 개발하시는데요. 이게 아주 중요하답니다.
+Spring MVC 기반으로 웹어플리케이션 개발시 중요한 2가지 종류의 클래스를 개발하시는데요. 이게 아주 중요하다.
 
 DTO == Data Transfer Object  
 == 데이터를 전달하는게 목적인 객체
