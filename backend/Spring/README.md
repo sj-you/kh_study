@@ -69,3 +69,18 @@ DTO == Data Transfer Object
 
 ![image](https://user-images.githubusercontent.com/88135939/194056399-dd6e12d5-e995-4a05-b9ed-36dfa2595ea7.png)
 
+### Controller
+
+*Controller 라는 것은, MVC 패턴에서
+Controller 에 해당 되며, 요청(request message)이 들어왔을 때!, 응답(response message)이 나가기까지 모든 처리의 흐름을 제어하는 자 이다.*
+
+```java
+// 컨트롤러의 핸들러 메소드
+// 무엇을 -> 특정 request 메소드
+// 1. 어떤 전송방식과 2. 어떤 Request URI 를 가지고 들어온 Request 를 처리하겠다는지
+// 위의 2가지 정보를 설정하는 Anoo -> @RequestMapping
+@RequestMapping(path = "/doA", method = RequestMethod.GET)
+public void doA() {		
+	log.trace("doA() invoked.");
+} // end doA
+```
