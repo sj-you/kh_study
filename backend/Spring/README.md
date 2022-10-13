@@ -4,10 +4,10 @@
 ```
 (1) log4j2.xml
     이 로그 설정파일에서 핵심은, 개발자가 로그를 보고 싶은 라이브러리의 "패키지"를 지정해서
-    새로운 Logger를 등록하는 것
+    새로운 Logger를 등록하는 것 이다.
    
    예: <Logger name="org.springframework" level="info" />
-                   스프링 프레임워크에서 남기는 info 레벨의 로그를 보자!
+                   스프링 프레임워크에서 남기는 log를 info level 로 보여주기.
 
 (2) web.xml     =======> **** (Servlet, listener)
      가. Spring Container 를 생성하는 Listener 가 자동등록 (설정파일: root-context.xml 사용됨)
@@ -41,8 +41,6 @@ http://localhost:8080/resources/video/2.mp4
 ### DTO/VO
     
 ```
-Spring MVC 기반으로 웹어플리케이션 개발시 중요한 2가지 종류의 클래스를 개발하시는데요. 이게 아주 중요하다.
-
 DTO == Data Transfer Object  
 == 데이터를 전달하는게 목적인 객체
 ==> 웹브라우저의 화면에서 사용자가 입력한 "전송파라미터들"을 수집해서, 이를 필요로하는
