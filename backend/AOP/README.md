@@ -16,3 +16,7 @@ Apect => 구현해야할 핵심비지니스 로직은 아니지만,
 ### JointPoint
 
 *Tatget 객체가 가지고 있는 메소드들 (예 : tranfer메소드 - 계좌이체)*
+
+### Advice
+
+*횡단관심사(Cross-Concern)을 실제 구현한 기능 ( 예 : 트랜잭션 처리 )*
