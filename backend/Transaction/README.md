@@ -12,3 +12,6 @@
 예: 2개의 데이터소스(각각 연결된 DB가 틀림)사용  
 - phase: 현재 분산TX에 참여한 각각의 데이터소스에게
 물어봄(Commit할 준비가 되어있는지)
+- 2nd. phase: 각 데이터소스에 연결된 DB의 TX관리자에게
+Commit 부탁  
+- TX관리자(규약: X/OPEN XA(분산TX)): WAS, Spring, Database
