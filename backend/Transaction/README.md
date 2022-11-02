@@ -17,7 +17,6 @@ Commit 부탁
 - TX관리자(규약: X/OPEN XA(분산TX)): WAS, Spring, Database
 
 2. 지역 TX (== Local TX)
-- 1개의 연결(JDBC Connection)으로, 여러개의 SQL(DML)문장  
-을 수행하는 경우의 트랜잭션  
+- 1개의 연결(JDBC Connection)으로, 여러개의 SQL(DML)문장 을 수행하는 경우의 트랜잭션    
 이때, TCL(commit/rollback문장) 사용  
 분산(==전역) TX관리는 애시당초부터 불가
