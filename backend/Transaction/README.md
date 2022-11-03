@@ -20,3 +20,4 @@ Commit 부탁
 - 1개의 연결(JDBC Connection)으로, 여러개의 SQL(DML)문장 을 수행하는 경우의 트랜잭션    
 이때, TCL(commit/rollback문장) 사용  
 분산(==전역) TX관리는 애시당초부터 불가
+- Transaction Boundary (하나의 TX으로 처리할 Connection 의 범위 => 하나의 TX으로 처리(all or nothing)할 DML작업의 범위)
